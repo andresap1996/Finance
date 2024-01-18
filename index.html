@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>Calculadora Finanzas</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  
+  <body>
+    <!--
+      The body includes the content you see in the page
+      Each element is defined using tags, like this <div></div>
+      The attributes like class="wrapper" let us style elements in the CSS
+    -->
+<form onsubmit="event.preventDefault(); calcularHipoteca();">
+  <div>
+    <label for="monto">Monto del préstamo:</label>
+    <input type="number" id="monto" placeholder="Ingrese el monto del préstamo">
+  </div>
+
+  <div>
+    <label for="tasa">Tasa de interés anual:</label>
+    <input type="text" id="tasa" placeholder="Ingrese la tasa de interés anual">
+  </div>
+
+  <div>
+    <label for="plazo">Plazo del préstamo en años:</label>
+    <input type="number" id="plazo" placeholder="Ingrese el plazo del préstamo en años">
+  </div>
+
+  <button type="submit">Calcular</button>
+</form>
+
+<div id="tabla-contenedor">
+  <table>
+    <thead>
+      <tr>
+        <th>Mes</th>
+        <th>Saldo Inicial</th>
+        <th>Pago</th>
+        <th>Interés</th>
+        <th>Capital</th>
+        <th>Saldo Final</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-amortizacion"></tbody>
+  </table>
+</div>
+
+<p id="monto-intereses"></p>
+
+<script src="script.js"></script>
+<link rel="stylesheet" href="estilos.css">
+
+
+  </body>
+</html>
